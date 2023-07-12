@@ -51,9 +51,13 @@ def viajeConEscalas(origen: str, destino: str, vuelos: List[Tuple[str, str]]) ->
   else:
     return -1
 
+
 if __name__ == '__main__':
   origen = input()
+  origen = origen.strip()
   destino = input()
+  destino = destino.strip()
   vuelos = input()
+  vuelos = vuelos.strip()
   
   print(sePuedeLlegar(origen, destino, [tuple(vuelo.split(',')) for vuelo in vuelos.split()]))
